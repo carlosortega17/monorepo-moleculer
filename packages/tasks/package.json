@@ -1,0 +1,55 @@
+{
+  "name": "containers",
+  "version": "1.0.3",
+  "private": true,
+  "description": "Microservices with moleculerjs 💪",
+  "scripts": {
+    "dev": "moleculer-runner --repl --hot --config moleculer.dev.config.js services/**/*.service.js",
+    "start": "moleculer-runner --config moleculer.config.js services",
+    "cli": "moleculer connect TCP",
+    "lint": "eslint . --ext .js",
+    "build": "echo 'No build? ok'",
+    "test": "jest --coverage",
+    "test:ci": "jest --coverage",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "microservices",
+    "moleculer"
+  ],
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "husky": "^7.0.4",
+    "jest": "^27.5.1",
+    "lint-staged": ">=12",
+    "moleculer-repl": "^0.7.0"
+  },
+  "dependencies": {
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/gitlab": "^9.4.2",
+    "@semantic-release/npm": "^9.0.1",
+    "dayjs": "^1.10.8",
+    "dotenv": "^16.0.0",
+    "lodash": "^4.17.21",
+    "moleculer": "^0.14.19",
+    "moleculer-db": "^0.8.17",
+    "moleculer-db-adapter-mongo": "^0.4.14",
+    "mongodb": "^4.4.0",
+    "mongoose": "^6.8.2",
+    "nats": "^2.6.1",
+    "qrcode": "^1.5.0",
+    "semantic-release": "^19.0.5"
+  },
+  "eslintIgnore": [
+    "*.test.js"
+  ],
+  "engines": {
+    "node": ">= 10.x.x"
+  },
+  "license": "MIT",
+  "lint-staged": {
+    "*.{js,jsx}": "eslint --cache --fix"
+  }
+}

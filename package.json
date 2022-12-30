@@ -6,7 +6,9 @@
   "private": "true",
   "workspaces": ["packages/*"],
   "scripts": {
-    "mono:co": "sui-mono commit"
+    "mono:co": "sui-mono commit",
+    "mono:run": "sui-mono run",
+    "mono:parallel": "sui-mono run-parallel"
   },
   "keywords": ["monorepo","microservices","react"],
   "author": "atrox39",
